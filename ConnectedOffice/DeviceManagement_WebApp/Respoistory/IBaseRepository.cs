@@ -9,6 +9,7 @@ namespace DeviceManagement_WebApp.Respoistory
 		IEnumerable<T> GetAll();
 		void Add(T entity);
 		void Update(T entity);
-		void Delete(Guid id);
+		void Delete(T entity);
+		bool Exists(Guid id);
 	}
 }

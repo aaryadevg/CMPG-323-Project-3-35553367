@@ -65,8 +65,6 @@ namespace DeviceManagement_WebApp.Controllers
             _context.Add(device);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
-
         }
 
         // GET: Devices/Edit/5
