@@ -17,11 +17,13 @@ namespace DeviceManagement_WebApp.Respoistory
 		public void Add(T entity)
 		{
 			_ctx.Set<T>().Add(entity);
+			_ctx.SaveChanges();
 		}
 
 		public void Delete(T entity)
 		{
 			_ctx.Set<T>().Remove(entity);
+			_ctx.SaveChanges();
 		}
 
 		public bool Exists(Guid id)
@@ -42,6 +44,7 @@ namespace DeviceManagement_WebApp.Respoistory
 		public void Update(T entity)
 		{
 			_ctx.Update(entity);
+			_ctx.SaveChanges();
 		}
 	}
 }
