@@ -82,7 +82,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var device = await _context.Device.FindAsync(id);
+            var device = _repository.GetById((Guid)id);
             if (device == null)
             {
                 return NotFound();
