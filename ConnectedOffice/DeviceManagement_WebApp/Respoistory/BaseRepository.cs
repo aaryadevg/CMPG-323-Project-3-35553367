@@ -41,6 +41,11 @@ namespace DeviceManagement_WebApp.Respoistory
 			return _ctx.Set<T>().Find(id);
 		}
 
+		public IEnumerable<U> GetDbSet<U>() where U : class
+		{
+			return _ctx.Set<U>().ToList();
+		}
+
 		public void Update(T entity)
 		{
 			_ctx.Update(entity);

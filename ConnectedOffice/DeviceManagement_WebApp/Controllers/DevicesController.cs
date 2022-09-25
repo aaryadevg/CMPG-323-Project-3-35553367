@@ -57,8 +57,9 @@ namespace DeviceManagement_WebApp.Controllers
         // GET: Devices/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryName");
-            ViewData["ZoneId"] = new SelectList(_context.Zone, "ZoneId", "ZoneName");
+
+            ViewData["CategoryId"] = new SelectList(_repository.GetDbSet<Category>(), "CategoryId", "CategoryName");
+            ViewData["ZoneId"] = new SelectList(_repository.GetDbSet<Zone>(), "ZoneId", "ZoneName");
             return View();
         }
 
@@ -88,9 +89,9 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            // TODO: Find more ask lecturer about this selected list... (Otherwise try a generic function)
-            ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryName", device.CategoryId);
-            ViewData["ZoneId"] = new SelectList(_context.Zone, "ZoneId", "ZoneName", device.ZoneId);
+            // The Generic Function works
+            ViewData["CategoryId"] = new SelectList(_repository.GetDbSet<Category>(), "CategoryId", "CategoryName", device.CategoryId);
+            ViewData["ZoneId"] = new SelectList(_repository.GetDbSet<Zone>(), "ZoneId", "ZoneName", device.ZoneId);
             return View(device);
         }
 
