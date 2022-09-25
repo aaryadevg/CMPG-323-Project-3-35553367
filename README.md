@@ -12,9 +12,11 @@ This project is a web app that allows users to manage the IOT devices within the
 # How to use this project
 
 1. Navigate to the [Hosted Website](TODO) you should see the following page
+   <img src ="Docs/step1.png" />
 2. Click the Register button to add a new user
-3. Enter your details and click register
-4. You should now see 3 additional Buttons (Zone, Device, Categories)
+   Enter your details and click register
+   <img src ="Docs/step2.png" />
+3. You should now see 3 additional Buttons (Zone, Device, Categories)
    **Zone** : Gives an overview of all the locations where IOT devices are stored \
    \
    **Device**: Gives an overview of all the devices in the company and where they are located \
@@ -22,11 +24,11 @@ This project is a web app that allows users to manage the IOT devices within the
    **Categories**: Devices are divided into general categories based on the functionality of the device, this page allows you to manage categories and add new ones if need be \
    \
    Each of these pages have a similar UI and the functionality remains the same
-5. Considering that let's navigate to Zone to get an overview of the UI, click on the Zone Button
-6. The "+" Icon can be used to create a new Record
-7. The "Pen" Icon can be used to edit a record
-8. The "Eye" Icon can be used to view additional details about a record
-9. The "Trash can" Icon can be used to delete a record
+4. Considering that let's navigate to Zone to get an overview of the UI, click on the Zone Button
+5. The "+" Icon can be used to create a new Record
+6. The "Pen" Icon can be used to edit a record
+7. The "Eye" Icon can be used to view additional details about a record
+8. The "Trash can" Icon can be used to delete a record
 
 # References
 
