@@ -136,7 +136,7 @@ namespace DeviceManagement_WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var zone = await _context.Zone.FindAsync(id);
+            var zone = _repository.GetById((Guid)id);
             _repository.Delete(zone);
             return RedirectToAction(nameof(Index));
         }
