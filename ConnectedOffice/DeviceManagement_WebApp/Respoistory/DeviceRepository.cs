@@ -12,6 +12,7 @@ namespace DeviceManagement_WebApp.Respoistory
 		{
 		}
 
+		// Details abot a device including the category and zone the device belongs to
 		public Device GetDetails(Guid id)
 		{
 			return _ctx.Device

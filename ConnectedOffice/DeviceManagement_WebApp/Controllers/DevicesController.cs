@@ -14,23 +14,15 @@ namespace DeviceManagement_WebApp.Controllers
     public class DevicesController : Controller
     {
         private readonly IDeviceRepository _repository;
-        private readonly ConnectedOfficeContext _context;
-
-        /*
-        public DevicesController(ConnectedOfficeContext context)
-        {
-            _context = context;
-        }
-        */
 
 		public DevicesController(IDeviceRepository repository)
 		{
 			_repository = repository;
 		}
 
-
-
 		// GET: Devices
+        // The repository is not Async and thus these are blocking technically, I probably should've made the repository Async
+        // But, it's too late, "It is what it is"
 		public async Task<IActionResult> Index()
         {
             var devices = _repository.GetAll();

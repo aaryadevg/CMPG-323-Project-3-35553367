@@ -5,6 +5,10 @@ using System.Linq;
 
 namespace DeviceManagement_WebApp.Respoistory
 {
+	/// <summary>
+	/// Base class for all repositories this contains implementation of all basic CRUD operations
+	/// </summary>
+	/// <typeparam name="T">Should be a model in the context</typeparam>
 	public class BaseRepository<T> : IBaseRepository<T> where T : class
 	{
 		protected readonly ConnectedOfficeContext _ctx;
@@ -17,7 +21,7 @@ namespace DeviceManagement_WebApp.Respoistory
 		public void Add(T entity)
 		{
 			_ctx.Set<T>().Add(entity);
-			_ctx.SaveChanges();
+			_ctx.SaveChanges(); 
 		}
 
 		public void Delete(T entity)

@@ -13,13 +13,8 @@ namespace DeviceManagement_WebApp.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly ConnectedOfficeContext _context;
+        // Reference to repository class (Passed in through DI system)
         private readonly IBaseRepository<Category> _repository;
-
-		/*        public CategoriesController(ConnectedOfficeContext context)
-				{
-					_context = context;
-				}*/
 
 		public CategoriesController(IBaseRepository<Category> repository)
 		{
@@ -27,12 +22,14 @@ namespace DeviceManagement_WebApp.Controllers
 		}
 
         // GET: Categories
+        // This is the default view returned when user visits the page
         public async Task<IActionResult> Index()
         {
             return View(_repository.GetAll());
         }
 
         // GET: Categories/Details/5
+        // When user clicks on the details button
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
