@@ -11,7 +11,7 @@ This project is a web app that allows users to manage the IOT devices within the
 
 # How to use this project
 
-1. Navigate to the [Hosted Website](TODO) you should see the following page
+1. Navigate to the [Hosted Website](https://35553367devicemanagementwebapp.azurewebsites.net) you should see the following page
    <img src ="Docs/step1.png" />
 2. Click the Register button to add a new user;
    Enter your details and click register
